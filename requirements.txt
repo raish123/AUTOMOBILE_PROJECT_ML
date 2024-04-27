@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+flask
+dill
+#-e . 
+#indicate single line command means to execute
