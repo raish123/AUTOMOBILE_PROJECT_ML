@@ -5,5 +5,5 @@ matplotlib
 seaborn
 flask
 dill
--e . 
+#-e . 
 #indicate single line command means to execute
