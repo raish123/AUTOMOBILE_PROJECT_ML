@@ -28,7 +28,7 @@ class DataIngestion():
         logging.info('Data Ingestion Process is initiated....')
         try:
             logging.info('Reading dataset From Local System')
-            df = pd.read_csv(r'D:\AUTOMOBILE_PROJECT_ML\notebook\data\Automobile_data.csv')
+            df = pd.read_csv(r'D:\AUTOMOBILE_PROJECT_ML\notebook\data\AUTOMOBILE_UPDATE.csv')
 
             logging.info('Successfully data readed from local system\n%s', df.head())
 
