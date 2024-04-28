@@ -47,5 +47,11 @@ class DataIngestion():
 
             logging.info('Data Ingestion Done SuccessFully')
 
+            return(
+                self.data_ingestion_config_obj.raw_data_path,
+                self.data_ingestion_config_obj.train_data_path,
+                self.data_ingestion_config_obj.test_data_path
+            )
+
         except Exception as e:
             raise CustomException(e,sys)
