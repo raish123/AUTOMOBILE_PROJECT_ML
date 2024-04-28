@@ -1,12 +1,14 @@
 from source.loggers import logging
 from source.exceptions import CustomException
 import os ,sys
+from source.components.data_ingestion import DataIngestion,DataIngestionConfig
 
 
 def main():
-    logging.info('Just Checking Logs Creating Or not')
+    logging.info('Just Checking artifacts Created Or not')
     try:
-        a=1/0
+        di = DataIngestion()
+        di.initiate_data_ingestion()
 
     except Exception as e:
         raise CustomException(e,sys)
