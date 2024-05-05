@@ -43,10 +43,25 @@ def evaluate_model(x_train ,y_train ,x_test ,y_test ,models):
             test_model_score = r2_score(y_test,y_test_pred)
 
             logging.info('appending scores to dictionary')
-            
+
             report[list(models.keys())[i]]= test_model_score
 
         return report
     
     except Exception as e:
         raise CustomException(e,sys)
+    
+
+
+
+def load_object(filepath):
+    logging.info('Loading the pickle file and read it successfully')
+    try:
+        with open(filepath,"rb") as f: 
+            obj = dill.load(f)
+
+        return obj
+    except Exception as e:
+        raise CustomException(e,sys)
+
+
