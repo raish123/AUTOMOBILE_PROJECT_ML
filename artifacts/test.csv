@@ -1,4 +1,4 @@
-symboling,normalized-losses,make,fuel-type,body-style,drive-wheels,engine-location,width,height,engine-type,engine-size,horsepower,city-mpg,highway-mpg,price
+symboling,normalized_losses,make,fuel_type,body_style,drive_wheels,engine_location,width,height,engine_type,engine_size,horsepower,city_mpg,highway_mpg,price
 0,,bmw,gas,sedan,rwd,front,66.9,55.7,ohc,209,182.0,16,22,30760
 0,,audi,gas,hatchback,4wd,front,67.9,52.0,ohc,131,160.0,16,22,12000
 0,106.0,nissan,gas,sedan,fwd,front,65.2,54.7,ohc,120,97.0,27,34,9549

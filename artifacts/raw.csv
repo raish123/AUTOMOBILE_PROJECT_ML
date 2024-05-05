@@ -1,4 +1,4 @@
-symboling,normalized-losses,make,fuel-type,body-style,drive-wheels,engine-location,width,height,engine-type,engine-size,horsepower,city-mpg,highway-mpg,price
+symboling,normalized_losses,make,fuel_type,body_style,drive_wheels,engine_location,width,height,engine_type,engine_size,horsepower,city_mpg,highway_mpg,price
 3,,alfa-romero,gas,convertible,rwd,front,64.1,48.8,dohc,130,111.0,21,27,13495
 3,,alfa-romero,gas,convertible,rwd,front,64.1,48.8,dohc,130,111.0,21,27,16500
 1,,alfa-romero,gas,hatchback,rwd,front,65.5,52.4,ohcv,152,154.0,19,26,16500

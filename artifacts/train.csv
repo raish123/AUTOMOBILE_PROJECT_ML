@@ -1,4 +1,4 @@
-symboling,normalized-losses,make,fuel-type,body-style,drive-wheels,engine-location,width,height,engine-type,engine-size,horsepower,city-mpg,highway-mpg,price
+symboling,normalized_losses,make,fuel_type,body_style,drive_wheels,engine_location,width,height,engine_type,engine_size,horsepower,city_mpg,highway_mpg,price
 0,,mazda,diesel,sedan,rwd,front,66.1,54.4,ohc,134,72.0,31,39,18344
 0,161.0,peugot,gas,sedan,rwd,front,68.4,56.7,l,120,95.0,19,24,15580
 0,77.0,toyota,gas,wagon,fwd,front,63.6,59.1,ohc,92,62.0,31,37,6918
