@@ -1,0 +1,202 @@
+<!-- Here I am using Templates Inheritence Concept this is child templates files
+     will over ride the tag of parent templates files known as Base.html  to inherit we have to use this syntax-->
+
+{% extends "base.html" %}
+
+{%block title%}
+    <title>PredictionForm</title>
+{%endblock%}
+
+
+{%block section %}
+    
+    <div>
+        <form action="{{url_for('predict')}}" method="post">
+            <table>
+                <tr>
+                    <td>symboling</td>
+                    <td>
+                        <!-- Select element with options -->
+                        <select name="symboling">
+                            <option value="-2">-2</option>
+                            <option value="-1">-1</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </td>
+                </tr>
+                <!-- creating next row in table for  -->
+                <tr>
+                    <td>normalized_losses</td>
+                    <td>
+                        <input type="number" name="normalized_losses" min="50" max="200">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>make</td>
+                    <td>
+                        <!-- Select element with options -->
+                        <select name="make">
+                            <option value="alfa-romero">Alfa Romeo</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="dodge">Dodge</option>
+                            <option value="honda">Honda</option>
+                            <option value="isuzu">Isuzu</option>
+                            <option value="jaguar">Jaguar</option>
+                            <option value="mazda">Mazda</option>
+                            <option value="mercedes-benz">Mercedes-Benz</option>
+                            <option value="mercury">Mercury</option>
+                            <option value="mitsubishi">Mitsubishi</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="peugot">Peugot</option>
+                            <option value="plymouth">Plymouth</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="renault">Renault</option>
+                            <option value="saab">Saab</option>
+                            <option value="subaru">Subaru</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="volkswagen">Volkswagen</option>
+                            <option value="volvo">Volvo</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>fuel_type</td>
+                    <td>
+                        <select name="fuel_type">
+                            <option value="gas">Gas</option>
+                            <option value="diesel">Diesel</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>body_style</td>
+                    <td>
+                        <!-- Select element for body style -->
+                        <select name="body_style">
+                            <option value="sedan">Sedan</option>
+                            <option value="hatchback">Hatchback</option>
+                            <option value="wagon">Wagon</option>
+                            <option value="hardtop">Hardtop</option>
+                            <option value="convertible">Convertible</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>drive_wheels</td>
+                    <td>
+                        <!-- Select element for drive wheels -->
+                        <select name="drive_wheels">
+                            <option value="4wd">4WD</option>
+                            <option value="fwd">FWD</option>
+                            <option value="rwd">RWD</option>
+                        </select>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>engine_location</td>
+                    <td>
+                        <!-- Select element for engine location -->
+                        <select name="engine_location">
+                            <option value="front">Front</option>
+                            <option value="rear">Rear</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>width</td>
+                    <td>
+                        <!-- Input field with type number and range set -->
+                        <input type="number" name="width" min="60" max="80" step="0.1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>height</td>
+                    <td>
+                        <!-- Input field with type number and range set -->
+                        <input type="number" name="height" min="40" max="60" step="0.1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>engine_type</td>
+                    <td>
+                        <!-- Select element with options -->
+                        <select name="engine_type">
+                            <option value="dohc">DOHC</option>
+                            <option value="dohcv">DOHCV</option>
+                            <option value="l">L</option>
+                            <option value="ohc">OHC</option>
+                            <option value="ohcf">OHCF</option>
+                            <option value="ohcv">OHCV</option>
+                            <option value="rotor">Rotor</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>engine_size</td>
+                    <td>
+                        <!-- Input field with type number and range set -->
+                        <input type="number" name="engine_size" min="120" max="190" step="10">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>horsepower</td>
+                    <td>
+                        <!-- Input field with type number and range set -->
+                        <input type="number" name="horsepower" min="50" max="300" step="10">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>city_mpg</td>
+                    <td>
+                        <!-- Input field with type number and range set -->
+                        <input type="number" name="city_mpg" min="10" max="35" step="1">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>highway_mpg</td>
+                    <td>
+                        <!-- Input field with type number and range set -->
+                        <input type="number" name="highway_mpg" min="15" max="60" step="1">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                    </td>
+
+                </tr>
+
+            </table>
+
+            <br>
+            <a href="{{url_for('index')}}">Click Here HomePage</a>
+        </form>
+    </div>
+    
+
+{% endblock %}

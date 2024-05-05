@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {%block title %}
+        <title>AutomobilePrediction</title>
+    {% endblock %}
+    <!-- You don't need to include <meta charset="utf-8"> inside <header> -->
+</head>
+<body>
+    <header>
+        <h2>Welcome to Automobile Prediction Page</h2>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('predict')}}">Prediction</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    
+    <section>
+        {%block section %}
+        
+        <p>
+            This project aims to predict automobile prices based on various features such as symboling, normalized<br> losses, make, fuel type, body style, drive wheels, engine location, width, height, engine type,<br> engine size, horsepower, city mpg, and highway mpg.
+            <br><a href="{{url_for('predict')}}">Click Here To Check Prediction</a>
+        </p>
+        {% endblock %}
+    </section>
+    
+
+    <br><br>
+
+    <footer>
+        <div class="copyright">
+            <!-- Use <address> tag for address information -->
+            
+            <br>
+            <span>
+                Mahatma Kabir Nagar Chakala Sahar Road Andheri East Mumbai 400099<br>
+                Mobile 9326742598
+            </span>
+            <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
