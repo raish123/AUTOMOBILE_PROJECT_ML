@@ -16,8 +16,6 @@ app = Flask(__name__,template_folder='templates')
 def index():
     return render_template('base.html')
 
-
-
 #creating another route for prediction 
 @app.route('/Prediction',methods=['GET','POST'])
 
@@ -47,7 +45,7 @@ def predict():
                               city_mpg, highway_mpg)
 
             # Get data as DataFrame
-            pred_df = data.get_data_as_data_frame()
+            pred_df = data.get_data_as_dataframe()
             logging.info('Prediction datapoint coming from webpage\n%s', pred_df)
 
             # Create PredictPipeline object
