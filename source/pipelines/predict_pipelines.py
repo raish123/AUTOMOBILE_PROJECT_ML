@@ -1,11 +1,14 @@
 import pandas as pd
 import numpy as np
 import dill
+import os
+import sys
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from source.exceptions import CustomException
 from source.loggers import logging
 from source.utils import load_object
-import os,sys
-
 
 class PredictPipeline():
     def __init__(self):
@@ -13,20 +16,22 @@ class PredictPipeline():
 
     def predict(self, feature):
         try:
-            preprocessor_path = 'artifacts\preprocessor.pkl'
-            model_path = 'artifacts\model.pkl'
+            preprocessor_path = 'artifacts/preprocessor.pkl'
+            model_path = 'artifacts/model.pkl'
 
             model = load_object(model_path)
             preprocessor = load_object(preprocessor_path)
 
-            logging.info('Successfully loaded model file and preprocess file. Now transforming and predicting new datapoint coming from the web')
-            
+            logging.info('Successfully loaded model and preprocessor. Now transforming and predicting new data.')
+
+            logging.info('The preprocessor used to transform new data:\n%s', preprocessor)
+
             # Transforming features using the preprocessor
             scaling = preprocessor.transform(feature)
             prediction = model.predict(scaling)
 
             return prediction
-        except Exception as e: 
+        except Exception as e:
             raise CustomException(e, sys)
 
 class CustomData():
@@ -45,7 +50,7 @@ class CustomData():
                 horsepower: int,
                 city_mpg: int,
                 highway_mpg: int):
-    
+
         self.symboling = symboling
         self.normalized_losses = normalized_losses
         self.make = make
@@ -61,7 +66,7 @@ class CustomData():
         self.city_mpg = city_mpg
         self.highway_mpg = highway_mpg
 
-    def get_data_as_data_frame(self):
+    def get_data_as_dataframe(self):
         custom_data_input_dict = {
             "symboling": [self.symboling],
             "normalized_losses": [self.normalized_losses],
